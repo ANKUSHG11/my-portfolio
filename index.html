@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <!-- <link rel="stylesheet" href="style.css"/> -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f9f9f9;
+ 
+}
+html{
+ scroll-padding-top: 80px;
+}
+
+.hero-container {
+ display: flex;
+ align-items: center;
+ justify-content:center;
+ flex-wrap: wrap;
+ gap: 40px;
+ padding: 100px 20px;
+ min-height: 90vh;
+}
+
+.hero-container img{
+ width: 320px;
+ height: 540px;
+ border-radius: 50%;
+ margin: 10px;
+ padding: 10px;
+}
+.hero-text {
+ text-align: center;
+ max-width: 500px;
+}
+.navbar {
+ background-color:#2C3930;
+ color: white;
+ box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+ position: sticky;
+ top: 0;
+ z-index: 999;
+}
+
+.nav-container {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 1rem 0;
+}
+
+.nav-logo {
+ font-family: italic;
+ font-size: 2rem;
+ color: #6e8efb;
+}
+
+.nav-links {
+ list-style: none;
+ display: flex;
+ gap: 1.5rem;
+}
+
+.nav-links a {
+ text-decoration: none;
+ color:white;
+ font-weight: 600;
+}
+
+.hero {
+ min-height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background: linear-gradient(120deg, #3F4F44, #A27B5C);
+ color: white;
+ text-align: center;
+}
+
+.hero .highlight {
+ color: #ffe100;
+}
+
+.cta-buttons {
+ margin-top: 1.5rem;
+}
+
+.btn {
+ display: inline-block;
+ margin: 0.5rem;
+ padding: 0.75rem 1.5rem;
+ background:#A27B5C;
+ color: white;
+ text-decoration: none;
+ border-radius: 30px;
+ transition: 0.3s ease;
+}
+
+.btn:hover {
+ background: #555;
+}
+
+.btn-outline {
+ background:#A27B5C ;
+ color:white ;
+}
+
+.about, .services, .projects, .contact {
+ text-align: center;
+ padding: 3rem 1rem;
+ padding-top: 80px;
+}
+
+.cards {
+ display: flex;
+ gap: 1.5rem;
+ flex-wrap: wrap;
+ justify-content: center;
+ margin-top: 2rem;
+}
+
+.card {
+ background: #DCD7C9;
+ color: #2C3930;
+ padding: 2rem;
+ border-radius: 12px;
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+ max-width: 300px;
+ border: 2px solid black;
+ transition: 0.3s ease  0.3s ease;
+}
+.card:hover{
+ transform: scale(1.1);
+ box-shadow: 0 15px 30px rgba(0,0,0,0.5) ;
+}
+.iframe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.iframe-card {
+  background: #DCD7C9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+iframe {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect - Iframe Ko Highlight Karein */
+.iframe-card:hover iframe {
+  transform: scale(1.02);
+}
+.view-btn {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+  background: #A27B5C;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+}
+
+.view-btn:hover {
+  background: #6e8efb;
+}
+
+footer {
+ text-align: center;
+ padding: 1.5rem;
+ background: #333;
+ color: white;
+}
+section{
+ background-color: #3F4F44;
+}
+/* Responsive Nav - Hide checkbox */
+#menu-toggle {
+ display: none;
+}
+
+/* Menu icon style */
+.menu-icon {
+ display: none;
+ font-size: 2rem;
+ color: white;
+ cursor: pointer;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+ .menu-icon {
+   display: block;
+ }
+
+ .nav-links {
+   position: absolute;
+   top: 65px;
+   right: 30px;
+   background: #2C3930;
+   flex-direction: column;
+   gap: 1rem;
+   padding: 1rem;
+   display: none;
+   border-radius: 10px;
+ }
+
+ #menu-toggle:checked + .menu-icon + .nav-links {
+   display: flex;
+ }
+}</style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="nav-logo">ANKUSH PIPPAL</div>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    
+  </nav>
+
+  <header class="hero">
+    <div class="hero-container">
+      <img src="ankush (2).jpg" alt="image" >
+      <div class="hero-text" ><h1>Hi, I'm <span class="highlight">ANKUSH PIPPAL</span></h1>
+      <p>Frontend Web Developer</p>
+      <div class="cta-buttons">
+        <a href="mailto:ankushpippel916@gmail.com" class="btn">Email Me</a>
+        <a href="https://wa.me/917599830548" class="btn btn-outline">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <section class="about" id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Hi! I'm a frontend developer from Agra, currently pursuing a diploma in Computer Science. I build clean, responsive websites using HTML & CSS.</p>
+    <p>I’m passionate about design and user experience. Always learning and improving to craft beautiful, functional websites.</p>
+    <p>Currently focused on building my portfolio and starting freelance work.</p>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+      <h2>What I Do</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Frontend Development</h3>
+          <p>Responsive websites using HTML5, CSS3, JavaScript.</p>
+        </div>
+        <div class="card">
+          <h3>Landing Pages</h3>
+          <h3>portfolio websites</h3>
+          <p>Clean, fast-loading one-page sites with CTA.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <p>Here are some of my recent works. (More coming soon...)</p>
+      <div class="iframe-grid">
+        <!-- Add your project cards here -->
+        <div class="iframe-card">
+          <h3> Personal portpolio Project</h3>
+          <a href="file:///C:/Users/Admin/Desktop/personal%20portfoloio/index.html" target="_blank">View full website</a>
+          <iframe src="file:///C:/Users/Admin/Desktop/personal%20portfoloio/index.html" frameborder="0"></iframe>
+        </div>
+        <div class="iframe-card">
+          <h3> mobile app showcase Project</h3>
+          <a href="file:///C:/Users/Admin/Desktop/startups/index.html" target="_blank">View full website</a>
+          <iframe src="file:///C:/Users/Admin/Desktop/startups/index.html" frameborder="0"></iframe>
+        </div>
+        <div class="iframe-card">
+          <h3> Resturent Project</h3>
+          <a href="file:///C:/Users/Admin/Desktop/new%20resturent/newindex.html" target="_blank">view full website</a>
+          <iframe src="file:///C:/Users/Admin/Desktop/new%20resturent/newindex.html" frameborder="0"></iframe>
+        </div>
+        <div class="iframe-card">
+          <h3> seminar Invitation Project</h3>
+          <a href="file:///C:/Users/Admin/Desktop/seminar/newindex.html" target="_blank">view full website</a>
+          <iframe src="file:///C:/Users/Admin/Desktop/seminar/newindex.html" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Let’s work together on your next project!</p>
+      <a href="mailto:ankushpippel916@gmail.com" class="btn">Send Email</a>
+      <a href="https://wa.me/917599830548" class="btn btn-outline">Message on WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ANKUSH PIPPaL. All rights reserved.</p>
+  </footer>
+</body>
+</html>
